@@ -11,8 +11,8 @@ from .serializer import CommentSerializer
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_all_comments(request):
-    comments = Comment.objects.all()
-    serializer = CommentSerializer(comments, many=True)
+    comment = Comment.objects.all()
+    serializer = CommentSerializer(comment, many=True)
     return Response(serializer.data)
 
 
@@ -28,7 +28,7 @@ def user_comments(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'GET':
-        comments = Comment.objects.filter(user_id=request.user.id)
-        serializer = CommentSerializer(comments, many=True)
+        comment = Comment.objects.filter(user_id=request.user.id)
+        serializer = CommentSerializer(comment, many=True)
         return Response(serializer.data)
 

@@ -1,7 +1,8 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-
+import React, {useState, useEffect} from 'react';
+import axios from "axios";
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -15,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
+  const [users, setUser] = useState([])
   return (
     <div>
       <Navbar />

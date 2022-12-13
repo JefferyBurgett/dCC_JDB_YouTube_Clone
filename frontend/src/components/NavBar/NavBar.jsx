@@ -12,8 +12,14 @@ const Navbar = () => {
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
+            <b>YouTubeClone</b>
           </Link>
+        </li>
+        <li>
+          <form class="d-flex" role="search">
+            <input className="form-control-lg" type="search" placeholder="Search" aria-label="Search"></input>
+            <button className="btn btn-primary" type="submit">Search</button>
+          </form>
         </li>
         <li>
           {user ? (
