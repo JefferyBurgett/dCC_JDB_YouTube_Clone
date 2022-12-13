@@ -33,8 +33,3 @@ li {
   cursor: pointer;
   font-size: 2rem;
 }
-
-.input[type=text] {
-  max-width: 500px;
-  max-height: 50px;
-}

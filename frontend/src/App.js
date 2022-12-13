@@ -7,6 +7,7 @@ import axios from "axios";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import YouTubePage from "./pages/YouTubePage/YouTubePage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -25,13 +26,17 @@ function App() {
           path="/"
           element={
             <PrivateRoute>
-              <HomePage />
+              <YouTubePage />
             </PrivateRoute>
           }
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
+      <iframe id="ytplayer" type="text/html" width="640" height="360"
+        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+        frameborder="0">          
+      </iframe>
       <Footer />
     </div>
   );
