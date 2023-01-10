@@ -56,3 +56,12 @@ button:hover {
   padding: 3px 7px;
   font-size: 17px;
 }
+
+.youtube-player {
+  margin: 50px 30% 50px;
+}
+
+/* .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+} */
