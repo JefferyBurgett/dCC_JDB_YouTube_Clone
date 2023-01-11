@@ -18,5 +18,25 @@ const SearchResultsPage = () => {
     const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues)
 }
 
+return (
+<div>
+        {videos &&
+            videos.map((video) => (
+              <div>
 
-export default SearchResultsPage
+              <p key={video.id}>
+                 {video.snippet.title}
+              </p>
+              <Link to={`/${video.id.videoId}`}>
+               <img src={video.snippet.thumbnails.medium.url}></img>
+              </Link>
+             
+              <p>{video.snippet.description}</p>
+              <br/>
+              <br/>
+              </div>
+            ))};
+  </div>   
+);       
+
+export default SearchResultsPage;

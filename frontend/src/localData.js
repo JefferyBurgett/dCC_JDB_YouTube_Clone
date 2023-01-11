@@ -10,7 +10,7 @@ export const DATA = [
                 "publishedAt": "2016-11-28T21:00:02Z",
                 "channelId": "UCxcnsr1R5Ge_fbTu5ajt8DQ",
                 "title": "Bob Ross - Island in the Wilderness (Season 29 Episode 1)",
-                "description": "Bob Ross fans! It's 'time' for some happy trees, and we've got just what you need: https://pxlfy.me/BobRossWatchMightyMojoToys ...",
+                "description": "Bob Ross fans! It's 'time' for some happy trees, and we've got just what you need: ",
                 "thumbnails": {
                     "default": {
                         "url": "https://i.ytimg.com/vi/lLWEXRAnQd0/default.jpg",

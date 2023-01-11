@@ -9,9 +9,6 @@ import {DATA} from "../../localData";
 import axios from "axios";
 
 const YouTubePage = () => {
-    // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
-    // The "token" value is the JWT token that you will send in the header of any request requiring authentication
-    //TODO: Add an AddCars Page to add a car for a logged in user's garage
     const [user, token] = useAuth();
     const [comment, setComments] = useState([]);
     // console.log(user);
@@ -26,23 +23,20 @@ const YouTubePage = () => {
 
     const fetchVideos = async () => {
       try {
-        let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=5&q=${searchTerm}&key=AIzaSyAKepytxUmWxBY5Q5bdSatiMDLGhFI9o1I`
+        let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=5&q=${searchTerm}&key=AIzaSyDSgal95ALrOJIXespWblS5Z0hDKSKRL6Q`
           );
           console.log(response.data.items);
         setVideos(response.data.items);
       } catch (error) {
         console.log(error.message);
       }
-    }
-    
+    }    
     
     function handleSubmit(event){
       event.preventDefault();
       fetchVideos();
-    }
-    
-    
-    
+    }  
+        
     
     return (
       <div>
@@ -55,14 +49,12 @@ const YouTubePage = () => {
           {videos &&
             videos.map((video) => (
               <div>
-
               <p key={video.id}>
                  {video.snippet.title}
               </p>
               <Link to={`/${video.id.videoId}`}>
                <img src={video.snippet.thumbnails.medium.url}></img>
               </Link>
-             
               <p>{video.snippet.description}</p>
               <br/>
               <br/>
@@ -70,9 +62,6 @@ const YouTubePage = () => {
              
             ))}
         </div>
-            {/* // );
-            // }; */}
-        
       </div>
     );
   };

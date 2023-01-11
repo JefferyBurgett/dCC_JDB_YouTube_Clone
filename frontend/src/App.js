@@ -1,8 +1,7 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import React, {useState, useEffect} from 'react';
-import axios from "axios";
+
 // Pages Imports
 import VideoPage from "./pages/VideoPage/VideoPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -19,7 +18,6 @@ import PrivateRoute from "./utils/PrivateRoute";
 
 
 function App() {
-  const [users, setUser] = useState([])
   return (
   <div>
     <div>
@@ -29,11 +27,7 @@ function App() {
         <Route path="/:videoId" element={<VideoPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    </div>
-    
-    
-    <div>     
+      </Routes> 
       <Footer />
     </div>
   </div>
