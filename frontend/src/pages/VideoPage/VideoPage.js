@@ -17,20 +17,21 @@ const VideoPage = () => {
     
     
     return (
-    <div className="video-page">
-      <div className="video-container">
-        <iframe
-                width="300"
-                height="150"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded youtube"
-                />      
-      </div>
-      <div className="relatedvideo-container">
-        <RelatedVideos setVideos={setVideos} />
-      </div>
+      <div className="video-page">
+        <div className="video-container">
+          <iframe
+                  className="video"
+                  // width="300"
+                  // height="150"
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embedded youtube"
+                  />      
+        </div>
+        <div className="relatedvideo-container">
+          <RelatedVideos setVideos={setVideos} />
+        </div>
     </div>
      
    

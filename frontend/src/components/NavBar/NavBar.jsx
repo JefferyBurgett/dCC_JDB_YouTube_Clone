@@ -2,16 +2,15 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./NavBar.css";
 
 const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
-
-
-
-
-
+  
+  
   return (
     <div className="navBar">
       <ul>
@@ -19,6 +18,9 @@ const Navbar = () => {
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             <b>YouTubeClone</b>
           </Link>
+        </li>
+        <li>
+        
         </li>
         <li>
           {user ? (
