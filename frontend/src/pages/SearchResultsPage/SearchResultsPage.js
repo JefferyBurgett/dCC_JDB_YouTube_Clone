@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect, useState} from "react"
 import { useNavigate } from "react-router-dom"
-import "./NavBar"
+// import "./NavBar"
 import useAuth from "../../hooks/useAuth"
 import useCustomForm from "../../hooks/useCustomForm"
+import { Link } from "react-router-dom"
 
 let initialValues = {
     user: "",
@@ -16,10 +17,10 @@ const SearchResultsPage = () => {
     const [user, token] = useAuth()
     const navigate = useNavigate()
     const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues)
-}
-
-return (
-<div>
+    const [videos, setVideos] = useState([]);
+    
+    return (
+      <div>
         {videos &&
             videos.map((video) => (
               <div>
@@ -36,7 +37,8 @@ return (
               <br/>
               </div>
             ))};
-  </div>   
+    </div>   
 );       
+};
 
 export default SearchResultsPage;

@@ -11,6 +11,11 @@
     align-items: center;
   }
 
+  .welcomescreen span {
+    font-size: xx-large;
+    font-weight: 700;
+  }
+
   .iframe {
     border: 10px;
     margin: auto;

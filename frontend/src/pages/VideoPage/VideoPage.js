@@ -2,7 +2,6 @@ import React from "react";
 import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import "./VideoPage.css";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
 

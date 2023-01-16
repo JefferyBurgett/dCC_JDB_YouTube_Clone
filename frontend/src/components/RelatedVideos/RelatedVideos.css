@@ -1,25 +1,27 @@
 
 .relatedvideo-item p {
-    margin-bottom: 1rem;
-    width: 90%;
-  }
-  
-  .singlevideo {
-    border-bottom: 1px solid rgb(158, 158, 158);
-    margin: 1rem 0 0 0;
-    padding: 1rem;
-  }
-  
-  .singlevideo img:hover {
-    box-shadow: 6px 6px 12px black;
-    transform: scale(1.05);
-  }
-  
-  .singlevideo a {
-    color: whitesmoke;
-    text-decoration: none;
-  }
-  
-  .singlevideo-item {
-    margin-top: 1rem;
-  }
+  margin-bottom: 1rem;
+  width: 90%;
+}
+
+.singlerelatedvideo {
+  border-bottom: 1px solid rgb(158, 158, 158);
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.singlerelatedvideo img:hover {
+  box-shadow: 6px 6px 12px black;
+  transform: scale(1.00);
+}
+
+/* .singlerelatedvideo a {
+  color: whitesmoke;
+  text-decoration: none;
+} */
+
+.singlerelatedvideo-item {
+  margin-top: 1rem;
+}

@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import "./YouTubePage.css";
 import {DATA} from "../../localData";
-
+import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from "axios";
 
 const YouTubePage = () => {
@@ -41,22 +41,27 @@ const YouTubePage = () => {
     return (
       <div>
         <div className="container">
-          <h1 className="welcomescreen"> Home Page for {user.username}!</h1>
-          <form onSubmit={handleSubmit} className="d-flex" role="search">
-            <input className="form-control-lg"  type="text" value={searchTerm} placeholder='Search...' aria-label="Search" onChange={(event) => setSearchTerm(event.target.value)}></input>
-            <button className="btn btn-primary" type="submit">Search</button>
-          </form>
-          {videos &&
+          <h1> 
+            <p className="welcomescreen"><span> Home Page for {user.username}!</span></p>
+          </h1>
+          <br/>
+          <div className="searchbar">
+            <form onSubmit={handleSubmit} className="d-flex" role="search">
+              <input className="form-control-lg"  type="text" value={searchTerm} placeholder='Search...' aria-label="Search" onChange={(event) => setSearchTerm(event.target.value)}></input>
+              <button className="btn btn-primary" type="submit">Search</button>
+            </form>
+      </div>
+        
+           {videos &&
             videos.map((video) => (
               <div>
               <p key={video.id} className="mainvideo">
-                 
               </p>
               <Link to={`/${video.id.videoId}`}>
                <img src={video.snippet.thumbnails.medium.url}></img>
                 <p className="videotitle"> {video.snippet.title}</p>
               </Link>
-              <p>{video.snippet.description}</p>
+              <p className="videodescription"> {video.snippet.description}</p>
               <br/>
               <br/>
               </div>
