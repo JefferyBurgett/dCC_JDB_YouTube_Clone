@@ -4,22 +4,22 @@
     width: 90%;
   }
   
-  .relatedvideo {
+  .singlevideo {
     border-bottom: 1px solid rgb(158, 158, 158);
     margin: 1rem 0 0 0;
     padding: 1rem;
   }
   
-  .relatedvideo img:hover {
+  .singlevideo img:hover {
     box-shadow: 6px 6px 12px black;
     transform: scale(1.05);
   }
   
-  .relatedvid a {
+  .singlevideo a {
     color: whitesmoke;
     text-decoration: none;
   }
   
-  .relatedvideo-item {
+  .singlevideo-item {
     margin-top: 1rem;
   }

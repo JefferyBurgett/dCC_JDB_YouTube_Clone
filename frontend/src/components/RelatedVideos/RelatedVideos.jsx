@@ -31,14 +31,13 @@ const RelatedVideos = (props) => {
           <div className="relatedvideo-item">
             {relatedVideos.map((video) => (
               <div>
-              <p key={video.id}>
-                 {video.snippet.title}
-              </p>
+              <p key={video.id} className="singlerelatedvideo"></p>
               <Link 
                 onClick={[ clickHandle,(video.id.videoId)
                 ]}
                 to={`/${video.id.videoId}`}>
                <img src={video.snippet.thumbnails.medium.url}></img>
+               <p className="videotitle"> {video.snippet.title}</p>
               </Link>             
               <br/>
               <br/>

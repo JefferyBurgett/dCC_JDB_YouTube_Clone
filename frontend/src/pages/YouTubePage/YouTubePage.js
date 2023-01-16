@@ -41,7 +41,7 @@ const YouTubePage = () => {
     return (
       <div>
         <div className="container">
-          <h1>Home Page for {user.username}!</h1>
+          <h1 className="welcomescreen"> Home Page for {user.username}!</h1>
           <form onSubmit={handleSubmit} className="d-flex" role="search">
             <input className="form-control-lg"  type="text" value={searchTerm} placeholder='Search...' aria-label="Search" onChange={(event) => setSearchTerm(event.target.value)}></input>
             <button className="btn btn-primary" type="submit">Search</button>
@@ -49,11 +49,12 @@ const YouTubePage = () => {
           {videos &&
             videos.map((video) => (
               <div>
-              <p key={video.id}>
-                 {video.snippet.title}
+              <p key={video.id} className="mainvideo">
+                 
               </p>
               <Link to={`/${video.id.videoId}`}>
                <img src={video.snippet.thumbnails.medium.url}></img>
+                <p className="videotitle"> {video.snippet.title}</p>
               </Link>
               <p>{video.snippet.description}</p>
               <br/>
