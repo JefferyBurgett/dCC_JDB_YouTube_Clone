@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import "./VideoPage.css";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
+import Comment from "../../components/Comments/Comments";
 
 const VideoPage = () => {   
     const [user, token] = useAuth();
     const { videoId } = useParams();
-    const [comment, setComments] = useState([]);
+    // const [comment, setComments] = useState([]);
     const [videos, setVideos] = useState([]);
+    const { comment } = useParams();
     // console.log(user);
     // console.log(token);
      
@@ -17,21 +19,35 @@ const VideoPage = () => {
     
     return (
       <div className="video-page">
-        <div className="video-container">
-          <iframe
-                  className="video"
-                  // width="300"
-                  // height="150"
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="Embedded youtube"
-                  />     
-        </div>
-        <div className="relatedvideo-container">
-          <RelatedVideos setVideos={setVideos} />
-        </div>
-    </div>
+        <div className="container-flex">
+          <div className="row row-col-8">
+            <div className="col">
+              <iframe
+                      className="video"
+                      // width="300"
+                      // height="150"
+                      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="Embedded youtube"
+                      /> 
+              </div>
+               <div className="commentsSection">
+                <div className="row">
+                  <div className="col-8">
+                    <Comment username={user.username} comment={comment} />
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>       
+         
+        <div className="relatedvideo-conatiner">
+          
+              <RelatedVideos setVideos={setVideos} />
+            </div>
+          </div>
+
      
    
     );

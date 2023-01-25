@@ -5,12 +5,11 @@ import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import "./YouTubePage.css";
 import {DATA} from "../../localData";
-import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from "axios";
 
 const YouTubePage = () => {
     const [user, token] = useAuth();
-    const [comment, setComments] = useState([]);
+    // const [comment, setComments] = useState([]);
     // console.log(user);
     // console.log(token);
     const [searchTerm, setSearchTerm] = useState("curacao diving")
