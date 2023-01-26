@@ -9,12 +9,8 @@ import Comment from "../../components/Comments/Comments";
 const VideoPage = () => {   
     const [user, token] = useAuth();
     const { videoId } = useParams();
-    // const [comment, setComments] = useState([]);
     const [videos, setVideos] = useState([]);
-    const { comment } = useParams();
-    // console.log(user);
-    // console.log(token);
-     
+    const { comment } = useParams();  
     
     
     return (
@@ -23,9 +19,7 @@ const VideoPage = () => {
           <div className="row row-col-8">
             <div className="col">
               <iframe
-                      className="video"
-                      // width="300"
-                      // height="150"
+                      className="video"                     
                       src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen

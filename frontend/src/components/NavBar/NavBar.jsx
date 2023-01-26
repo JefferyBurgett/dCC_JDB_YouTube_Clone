@@ -2,8 +2,6 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "./NavBar.css";
 
 const Navbar = () => {

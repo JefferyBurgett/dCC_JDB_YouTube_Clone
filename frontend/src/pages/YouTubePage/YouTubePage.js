@@ -4,14 +4,10 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import "./YouTubePage.css";
-import {DATA} from "../../localData";
 import axios from "axios";
 
 const YouTubePage = () => {
-    const [user, token] = useAuth();
-    // const [comment, setComments] = useState([]);
-    // console.log(user);
-    // console.log(token);
+    const [user, token] = useAuth();    
     const [searchTerm, setSearchTerm] = useState("curacao diving")
     const [videos, setVideos] = useState([]);
 
@@ -72,48 +68,3 @@ const YouTubePage = () => {
   };
   
   export default YouTubePage;
-
-
-
-
-
-
-
-
-
-  // <div className="container-fluid">   
-  //         <div className="row">
-  //           <div className="col-sm-8">
-              
-  //           </div>
-  //           <div className="col-sm-4">
-  //             <iframe
-  //               width="300"
-  //               height="150"
-  //               src={`https://jsonplaceholder.typicode.com/photos/albumid/1/id/2`}
-  //               frameBorder="0"
-  //               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  //               allowFullScreen
-  //               title="Embedded youtube"
-  //               />
-  //             <iframe
-  //               width="300"
-  //               height="150"
-  //               src={`https://jsonplaceholder.typicode.com/photos/albumid/1/id/3`}
-  //               frameBorder="0"
-  //               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  //               allowFullScreen
-  //               title="Embedded youtube"
-  //               />
-  //             <iframe
-  //               width="300"
-  //               height="150"
-  //               src={`https://jsonplaceholder.typicode.com/photos/albumid/1/id/4`}
-  //               frameBorder="0"
-  //               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  //               allowFullScreen
-  //               title="Embedded youtube"
-  //               />
-  //           </div>        
-  //         </div>   
-  //       </div>
